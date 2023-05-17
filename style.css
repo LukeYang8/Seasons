@@ -1,0 +1,123 @@
+body {
+    font-size: large;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+.navbar-container{
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.logo{
+    width: 75px;
+    height: auto;
+    max-width: 100%;
+    border-radius: 100px;
+    transition: all 0.3s ease 0s;
+}
+
+.logo img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.logo:hover{
+    background-color: var(--text-hover-color);
+}
+
+.navbar-links{
+    list-style: none;
+}
+
+.navbar-links li{
+    display: inline-block;
+    padding: 0 30px;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.navbar-links a{
+    text-decoration: none;
+    
+    transition: all 0.3s ease 0s;
+}
+
+.navbar-links a:visited{
+    color: var(--text-color);
+}
+
+.navbar-links a:hover{
+    color: var(--text-hover-color);
+}
+
+.seasons-button button{
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+
+    width: 15em;
+    height: 15em;
+    padding: 0;
+
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.seasons-button img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+}
+
+.spring .spring-theme img{
+    opacity: 1;
+}
+
+.autumn .autumn-theme img{
+    opacity: 1;
+}
+
+.winter-theme img{
+    opacity: 1;
+}
+
+.summer .summer-theme img{
+    opacity: 1;
+}
+
+
+
+:root,
+    :root.winter {
+        --bg-color: blue;
+        --text-color: white;
+        --text-hover-color: aqua;
+    }
+    :root.autumn {
+    --bg-color: orange;
+    --text-color: red;
+    --text-hover-color: brown;
+    }
+    :root.spring {
+    --bg-color: green;
+    --text-color: blue;
+    --text-hover-color: yellow;
+    }
+    
+    :root.summer {
+        --bg-color: red;
+        --text-color: yellow;
+        --text-hover-color: orange;
+    }
+
+
