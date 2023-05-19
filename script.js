@@ -1,7 +1,9 @@
 let currTheme = 'winter';
+const audio = new Audio();
+audio.src = "./images/season-change.mp3";
 
 function setTheme() {
-    console.log(currTheme);
+    audio.play();
     if (currTheme === 'autumn') { //autumn -> winter
         document.documentElement.className = 'winter';
         currTheme = 'winter';
@@ -16,3 +18,4 @@ function setTheme() {
         currTheme = 'spring';
     }
 }
+

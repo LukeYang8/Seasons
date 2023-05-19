@@ -3,32 +3,17 @@ body {
     margin: 0;
     border: 0;
     padding: 0;
+    background-color: var(--bg-color);
 }
 
-.navbar-container{
-    background-color: var(--bg-color);
+#navbar{
+    background-color: var(--navbar-color);
     display: flex;
     justify-content: space-between;
-    align-items: center;
-
-}
-
-.logo{
-    width: 75px;
-    height: auto;
-    max-width: 100%;
-    border-radius: 100px;
-    transition: all 0.3s ease 0s;
-}
-
-.logo img{
-    width: 100%;
-    height: 100%;
-    display: block;
-}
-
-.logo:hover{
-    background-color: var(--text-hover-color);
+    align-items: flex-end;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    
 }
 
 .navbar-links{
@@ -37,7 +22,7 @@ body {
 
 .navbar-links li{
     display: inline-block;
-    padding: 0 30px;
+    padding: 0 35px;
     font-size: 30px;
     font-weight: 700;
     color: var(--text-color);
@@ -45,7 +30,6 @@ body {
 
 .navbar-links a{
     text-decoration: none;
-    
     transition: all 0.3s ease 0s;
 }
 
@@ -54,7 +38,215 @@ body {
 }
 
 .navbar-links a:hover{
+    font-size: 35px;
     color: var(--text-hover-color);
+}
+
+.navbar-socials{
+    list-style: none;
+}
+
+.navbar-socials li{
+    display: inline-block;
+    padding: 0 35px;
+}
+
+.navbar-socials img{
+    height: 2.1em;
+    width: auto;
+}
+
+
+#instagram:hover {
+    background-color: var(--text-hover-color);
+    border-radius: 20%;
+    transform: scale(1.25);
+}
+
+#facebook:hover {
+    background-color: var(--text-hover-color);
+    border-radius: 20%;
+    transform: scale(1.25);
+}
+
+#discord:hover {
+    background-color: var(--text-hover-color);
+    border-radius: 20%;
+    transform: scale(1.25);
+}
+
+#instagram:active {
+   transform: scale(0.8);
+}
+
+#facebook:active {
+    transform: scale(0.8);
+}
+
+#discord:active {
+    transform: scale(0.8);
+}
+
+.break{
+    flex-basis: 100%;
+    height: 0;
+}
+
+
+.name-container{
+    display: flex;
+    font-size: 100px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 200px;
+}
+
+.about-me-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 50px;
+    font-weight: 800;
+    padding-bottom: 40px;
+}
+
+.about-me{
+    margin: auto;
+    width: 65%;
+    text-align: center;
+    padding-bottom: 200px;
+}
+
+.about-content{
+    font-size: 30px;
+    line-height: 70px;
+}
+
+.year{
+    font-weight: 700;
+}
+
+.degree{
+    font-weight: 700;
+    padding-bottom: 50px;
+}
+
+.hobbies-header{
+    font-size: 50px;
+    font-weight: 800;
+    padding-bottom: 40px;
+}
+
+.hobbies{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    text-align: left;
+}
+
+.hobbie-text{
+    font-size: 30px;
+    width: 70%;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.hobbie-vid{
+    width:35%;
+    height: auto;
+    position: relative;
+    margin-bottom: 20px;
+
+    border-radius: 17%;
+    border: double 10px transparent;
+    background-image: linear-gradient(white, white),
+    linear-gradient(45deg, var(--navbar-color), greenyellow);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+
+}
+
+.hobbie-vid img{
+    width: 100%;
+    height: auto;
+    border-radius: 15%;
+    display: block;
+}
+
+.hobbie-vid:hover .text-overlay{
+    height: 100%;
+}
+
+.hobbie-vid:hover {
+    opacity: 0.8;
+}
+
+.text-overlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: 0.5s ease;
+    border-radius: 15%;
+    opacity: 0.8;
+}
+
+.text-overlay p, h1{
+    width: 100%;
+    margin-top: 5%;
+    text-align: center;
+    transform: rotate(-2deg)skewX(-2deg);
+    
+    font-size: 50px;
+    font-weight: 700;
+    color: lightblue;
+    -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: black;
+}
+
+.text-overlay h1{
+    font-size: 75px;
+}
+
+
+.music-header{
+    padding-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-weight: 800;
+    padding-bottom: 40px;
+}
+
+.music-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.spotify:hover{
+    animation: spotify-hover;
+    animation-fill-mode: forwards;
+}
+
+@keyframes spotify-hover{
+    from{}
+    to{
+        box-shadow: 0px 0px 5px 10px #fff;
+        transform: scale(1.005);
+    }
 }
 
 .seasons-button button{
@@ -99,25 +291,37 @@ body {
 
 :root,
     :root.winter {
-        --bg-color: blue;
+        --navbar-color: blue;
         --text-color: white;
         --text-hover-color: aqua;
+        --bg-color: lightblue;
     }
     :root.autumn {
-    --bg-color: orange;
-    --text-color: red;
-    --text-hover-color: brown;
+        --navbar-color: orange;
+        --text-color: red;
+        --text-hover-color: brown;
+        --bg-color: yellow;
     }
     :root.spring {
-    --bg-color: green;
-    --text-color: blue;
-    --text-hover-color: yellow;
+        --navbar-color: green;
+        --text-color: blue;
+        --text-hover-color: yellow;
+        --bg-color: lightgreen;
     }
     
     :root.summer {
-        --bg-color: red;
+        --navbar-color: red;
         --text-color: yellow;
         --text-hover-color: orange;
+        --bg-color: orange;
     }
 
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
 
