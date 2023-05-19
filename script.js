@@ -19,3 +19,15 @@ function setTheme() {
     }
 }
 
+var red = document.querySelector('.i');
+
+function setProperty(duration) {
+  red.style.setProperty('--animation-time', duration +'s');
+}
+
+function changeAnimationTime() {
+  var animationDuration = Math.random();
+  setProperty(animationDuration);
+}
+
+setInterval(changeAnimationTime, 1000);
