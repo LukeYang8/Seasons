@@ -8,6 +8,8 @@ body {
     min-height: 100%;
 }
 
+
+
 #navbar{
     background-color: var(--navbar-color);
     display: flex;
@@ -15,6 +17,9 @@ body {
     align-items: flex-end;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
 }
 
 .navbar-links{
@@ -45,7 +50,7 @@ body {
 
 .navbar-links a:hover{
     -webkit-text-stroke: 2px var(--text-color);
-    text-shadow: var(--text-shadow);
+    text-shadow: var(--text-shadow-before);
 }
 
 
@@ -111,7 +116,26 @@ body {
     align-items: center;
     flex-wrap: wrap;
     padding-bottom: 200px;
+    padding-top: 100px;
     font-family: 'Kalam', cursive;
+}
+
+.name-container p{
+	color: var(--text-hover-color);
+    -webkit-text-stroke: 2px black;
+    animation: name-ani 3s ease-in-out infinite alternate;
+}
+
+@keyframes name-ani {
+    from{
+        transform: rotate(-2deg);
+        text-shadow: var(--text-shadow-before);
+        
+    }
+    to{
+        transform: rotate(2deg);
+        text-shadow: var(--text-shadow);
+    }
 }
 
 .about-me-header{
@@ -119,11 +143,25 @@ body {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    font-size: 60px;
+    font-size: 65px;
     font-style: italic;
     font-weight: 800;
     font-family: 'Kalam', cursive;
     padding-bottom: 40px;
+    color: var(--text-hover-color);
+    -webkit-text-stroke: 2px black;
+    animation: header-ani 5s ease-in-out infinite alternate;
+}
+@keyframes header-ani {
+    from{
+        transform:scale(0.95);
+        text-shadow: var(--text-shadow-before);
+        
+    }
+    to{
+        transform: scale(1);
+        text-shadow: var(--text-shadow);
+    }
 }
 
 .about-me{
@@ -131,14 +169,16 @@ body {
     width: 65%;
     text-align: center;
     padding-bottom: 200px;
+    
 }
 
 .about-content{
-    font-size: 30px;
+    font-size: 40px;
     line-height: 70px;
     font-family: 'Kalam', cursive;
     font-style: italic;
-
+    color: var(--text-normal-color);
+    -webkit-text-stroke: 1.5px black;
 }
 
 .year{
@@ -157,12 +197,14 @@ body {
 
 
 .hobbies-header{
-    font-size: 60px;
+    font-size: 65px;
     font-weight: 800;
     padding-bottom: 40px;
     font-family: 'Kalam', cursive;
     font-style: italic;
-
+    color: var(--text-hover-color);
+    -webkit-text-stroke: 2px black;
+    animation: header-ani 5s ease-in-out infinite alternate;
 }
 
 .hobbies{
@@ -176,13 +218,15 @@ body {
 }
 
 .hobbie-text{
-    font-size: 30px;
+    font-size: 40px;
     width: 70%;
     text-align: center;
     padding-bottom: 20px;
     font-family: 'Kalam', cursive;
     font-style: italic;
     line-height: 70px;
+    color: var(--text-normal-color);
+    -webkit-text-stroke: 1.5px black;
 }
 
 .hobbie-vid{
@@ -239,7 +283,7 @@ body {
     font-weight: 700;
     font-family: 'Kalam', cursive;
 
-    color: lightblue;
+    color: var(--text-hover-color);
     -webkit-text-stroke-width: 0.5px;
   -webkit-text-stroke-color: black;
 }
@@ -254,12 +298,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 60px;
+    font-size: 65px;
     font-weight: 800;
     padding-bottom: 40px;
     font-family: 'Kalam', cursive;
     font-style: italic;
-
+    color: var(--text-hover-color);
+    -webkit-text-stroke: 2px black;
+    animation: header-ani 5s ease-in-out infinite alternate;
 }
 
 .music-list{
@@ -426,7 +472,8 @@ body {
     margin-bottom: 0;
     font-family: 'Kalam', cursive;
     font-style: italic;
-
+    color: var(--text-normal-color);
+    -webkit-text-stroke: .5px black;
 }
 
 .svg{
@@ -443,8 +490,9 @@ body {
         --bg-color: lightblue;
         --bottom-color: white;
         --fall-color: white;
-        --text-shadow:#AFD3E2 0px 0px 20px, #AFD3E2 0px 0px 30px, #AFD3E2 0px 0px 40px, #AFD3E2 0px 0px 50px, #AFD3E2 0px 0px 75px, 2px 2px 2px;
-        ;
+        --text-shadow:white 0px 0px 20px, white 0px 0px 30px, white 0px 0px 40px, white 0px 0px 50px, white 0px 0px 75px, 2px 2px 2px;
+        --text-shadow-before:white 0px 0px 20px, white 0px 0px 30px;
+        --text-normal-color: #1588ff;
     }
     :root.autumn {
         --navbar-color: #a7532d;
@@ -453,8 +501,9 @@ body {
         --bg-color: 	#cc9d3a;
         --bottom-color: orange;
         --fall-color: #F8B005;
-        --text-shadow: #cc9d3a 0px 0px 20px, #cc9d3a 0px 0px 30px, #cc9d3a 0px 0px 40px, #cc9d3a 0px 0px 50px, #cc9d3a 0px 0px 75px, 2px 2px 2px;
-        
+        --text-shadow: #F8B005 0px 0px 20px, #F8B005 0px 0px 30px, #F8B005 0px 0px 40px, #F8B005 0px 0px 50px, #F8B005 0px 0px 75px, 2px 2px 2px;
+        --text-shadow-before: #F8B005 0px 0px 20px, #F8B005 0px 0px 30px;
+        --text-normal-color: #a7532d;
     }
     :root.spring {
         --navbar-color: #37AE0F;
@@ -464,14 +513,18 @@ body {
         --bottom-color: green;
         --fall-color: #79D021;
         --text-shadow: green 0px 0px 20px, green 0px 0px 30px, green 0px 0px 40px, green 0px 0px 50px, green 0px 0px 75px, 2px 2px 2px;
+        --text-shadow-before: green 0px 0px 20px, green 0px 0px 30px;
+        --text-normal-color: #597C2B;
     }
     
     :root.summer {
         --navbar-color: #FF4500;
         --text-color: #FFA500;
-        --text-hover-color: #FFD700;
+        --text-hover-color: #FF4500;
         --bg-color: #FFD700;
         --bottom-color: #FF4500;
         --fall-color: #FF4500;
         --text-shadow:  0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00, 2px 3px 0px rgba(206,89,55,0);
+        --text-shadow-before: 0 -10px 20px #ff8000;
+        --text-normal-color: #FFA500;
     }
