@@ -28,14 +28,15 @@ body {
     font-weight: 700;
     font-family: 'Kalam', cursive;
     font-style: italic;
-    color: var(--text-color);
-    text-shadow: 0 2px 0 black;
+    
 }
 
 .navbar-links a{
     text-decoration: none;
     transition: all 0.3s ease 0s;
     animation: navbar-hover 3s ease-in-out infinite alternate; 
+    color: var(--text-color);
+    text-shadow: 0 2px 0 black;
 }
 
 .navbar-links a:visited{
