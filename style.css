@@ -49,6 +49,7 @@ body {
 }
 
 .navbar-links a:hover{
+    color: var(--text-hover-color);
     -webkit-text-stroke: 2px var(--text-color);
     text-shadow: var(--text-shadow-before);
 }
